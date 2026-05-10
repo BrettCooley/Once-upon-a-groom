@@ -1,5 +1,11 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Playfair Display", serif;
 }
 
 
@@ -12,18 +18,18 @@ header {
 .page_hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: url(/images/Peggy\ bg\ hero.webp);
+    background-image: url(/images/bg\ for\ Sarah\ grooming\ site.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 680px;
-    padding-top: 200px;
+    padding-top: 0px;
     align-items: center;
+    min-height: 100vh;
     
 }
 
 .navigation_container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
     box-shadow: 0px 5px 40px rgba(0, 0,0, 0.4);
     margin: 0;
     padding: 0;
@@ -65,11 +71,11 @@ header {
 }
 
 .navigation_buttons a:nth-child(5) {
+   
     background: #D46A7E;
     border-radius: 20px;
     border: 2px solid black;
     padding: 10px;
-    margin-left: 140px;
     color: white;
 
 }
@@ -87,12 +93,51 @@ header {
     align-items: left;
     justify-items: left;
     flex-direction: column;
-    padding-bottom: 300px;
+    padding-bottom: 0px;
+    padding-left: 20px;
 }
 
-.hero_text h1, h2 {
-    margin: 0;
+.hero_text h1 {
+    font-size: 3rem;
+    padding-bottom: 30px;
 }
+
+.hero_text h2 {
+    padding-bottom: 30px;
+
+}
+
+.hero_text a {
+    text-decoration: none;
+    background: #D46A7E;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 0px;
+    color: white;
+    width: fit-content;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.hero_text a:hover {
+    transform: scale(1.03);
+
+}
+
+.peggy_image_hero img{
+    display: block;
+    width: 600px;
+    padding-left: 100px;
+    height: auto;
+}
+
+.peggy_image_hero {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
 
 #about {
     display: grid;
@@ -104,6 +149,7 @@ header {
     width: 700px;
     height: auto;
     border-radius: 30px;
+  
 }
 
 .about_text {
@@ -115,13 +161,10 @@ header {
     text-align: center;
 }
 
-
-
-
-
-
-
-
+.about_text p {
+    font-weight: 500;
+    padding-bottom: 50px;
+}
 
 
 @media (max-width: 768px) {
@@ -134,15 +177,20 @@ header {
            
     }
 
+    .burger.active::before {
+        position: absolute;
+        font-size: 2rem;
+    }
 
     .page_hero {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center 40%;
-    min-height: 620px;
+    background-position: center 35%;
+    min-height: 500px;
     display: flex;
     align-items: center;
     padding-top: 0px;
+    padding-bottom: 0;
     }
 
     .navigation_container {
@@ -178,7 +226,7 @@ header {
     }
 
     .navigation_buttons a {
-        font-size: 2rem;
+        font-size: 1rem;
         gap: 10px;
     }
 
@@ -196,19 +244,50 @@ header {
     }
 
     .hero_text {
-        padding-right: 250px;
+        padding-right: 0px;
         text-align: left;
-        padding-top: 200px;
+        padding-top: 0px;
+        padding-left: 45px;
+        max-width: 400px;
     }
 
+    .peggy_image_hero img{
+    display: block;
+    width: 300px;
+    padding-left: 0px;
+    height: auto;
+}
+
+.peggy_image_hero {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+
     .page_hero h1 {
-        font-size: 1rem;
+        font-size: 2rem;
+        padding-bottom: 20px;
     }
 
     .page_hero h2 {
         font-size: 1rem;
+        padding-bottom: 20px;
     }
 
+    .hero_text a {
+    text-decoration: none;
+    background: #D46A7E;
+    border-radius: 10px;
+    border: 2px solid #2d2d2d;
+    padding: 5px;
+    margin-top: 0px;
+    margin-left: 0px;
+    color: white;
+    width: fit-content;
+    font-size: 1rem;
+
+    }
     .about_container img {
         width: 500px;
         height: auto;
@@ -251,7 +330,7 @@ header {
     }
 
     .navigation_buttons {
-        top: 60px;
+        top: 40px;
     } 
 
     .navigation_buttons a {
@@ -264,54 +343,77 @@ header {
     border-radius: 20px;
     border: 2px solid #222222;
     padding: 10px;
-    margin-left: 0px;
+    margin-left: 10px;
 
     }
-
-
-
-    header {
-        padding-left: 30px;
-        margin: 0;
-        justify-content: flex-start;
-    }
+   
 
 
     .page_hero {
-        background-position: center 130%;
-        align-items: flex-start;
-        min-height: 260px;
-
+        display: grid;
+        padding-top: 0;
+        grid-template-columns: 1fr;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 100vh;
+        
     }
 
     .hero_text {
+        display: flex;
+        align-items: center;
         text-align: left;
-        align-self: center;
+        padding-top: 0;
+        margin-left: 0px;
         padding: 0;
+        width: 100%;
+        padding-left: 70px;
+    }
+
+    .hero_text a {
+      margin: 0;
+      padding: 10px;
+      align-self: center;
+      margin-left: 40px;
     }
 
     .page_hero h1 {
+        padding-top: 100px;
+        padding-left: 50px;
         display: flex;
-        font-size: 0.5em;
+        justify-content: center;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+
         
     }
 
     .page_hero h2 {
-        font-size: 0.3rem;
+        display: flex;
+        padding-left:20px;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 100%;
     }
 
     .navigation_container img {
         width: 120px;
         height: auto;
         position: relative;
-        transform: translate(-40px);
-        background-color: white;
+        transform: translate(-20px);
     }
     
+
     .about_container img {
+        display: block;
         width: 350px;
         height: auto;
         border-radius: 30px;
+        align-items: center;
     }
 
     .about_text {
@@ -325,18 +427,53 @@ header {
 
     .about_text h4{
         font-size: 0.5rem;
+        padding-top: 60px;
     }
 
     .about_text h1{
         font-size: 1rem;
+        padding-top: 10px
 
     }
     .about_text p{
         font-size: 0.5rem;
         padding-bottom: 20px;
 
+    }
 
+     .peggy_image_hero {
+        display: flex;
+        padding-right: 50px;
+     }
+    
+    .peggy_image_hero img{
+        display: block;
+        width: 500px;
+        height: auto;
+        
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 70%,
+            transparent 50%,
+            transparent 100%
+        );
 
-
+        mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 70%,
+            transparent 50%,
+            transparent 100%
+        );
 }
 
+    }
+
+    .peggy_image_hero {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
