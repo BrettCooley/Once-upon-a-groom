@@ -24,8 +24,33 @@ header {
     padding-top: 0px;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
     
 }
+
+.page_hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.95) 0%,
+        rgba(255,255,255,0.8) 20%,
+        rgba(255,255,255,0.3) 45%,
+        rgba(255,255,255,0) 65%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero_text,
+.peggy_image_hero {
+    position: relative;
+    z-index: 2;
+}
+
+
 
 .navigation_container {
     display: grid;
@@ -67,12 +92,13 @@ header {
     text-decoration: none;
     font-size: 1.2rem;
     color: #222222;
+    font-weight: 600;
 
 }
 
 .navigation_buttons a:nth-child(5) {
    
-    background: #D46A7E;
+    background: #EF818F;
     border-radius: 20px;
     border: 2px solid black;
     padding: 10px;
@@ -109,7 +135,7 @@ header {
 
 .hero_text a {
     text-decoration: none;
-    background: #D46A7E;
+    background: #EF818F;
     border-radius: 20px;
     border: 2px solid black;
     padding: 10px;
@@ -135,36 +161,159 @@ header {
 .peggy_image_hero {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 0px;
 }
 
 
-#about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 40px;
+
+#Services {
+    min-height: 75vh;
+    background-color: #f1efed;
 }
 
-.about_container img {
-    width: 700px;
+.Services_container {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
+
+
+.Services_container img {
+    display: block;
+    padding-top: 10px;
+    width: 200px;
     height: auto;
-    border-radius: 30px;
-  
+    margin: 0 auto;
+
 }
 
-.about_text {
+.Services_container h1 {
+    z-index: 2;
+    font-size: 2rem;
+    padding-top: px;
+}
+
+.Services_container h2 {
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-top: 50px;
+}
+
+.Service_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.Service_card {
     display: flex;
     justify-content: center;
-    align-self: center;
     flex-direction: column;
-    margin: 0;
+    align-items: center;
     text-align: center;
+    background-color: white;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.about_text p {
-    font-weight: 500;
+.Service_card img {
+    width: 200px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.Service_card h2 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+
+}
+
+.Service_card h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.Service_card:nth-child(4) img {
+    padding-top: 0px;
+}
+
+
+#Gallery {
+
+}
+
+.gallery_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.gallery_text h2 {
+    padding-bottom: 50px;
+    font-size: 2rem;
+}
+
+.gallery_text h3 {
+    padding-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.gallery_photos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,520px);
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.gallery_photo {
+    position: relative;
     padding-bottom: 50px;
 }
+
+.gallery_photo h1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 2rem;
+    color: white;
+    background-color:  #EF818F;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.gallery_photo img {
+    display: block;
+    width: 520px;
+    height: 520px;
+    border-radius: 30px;
+    border: 6px solid #EF818F;
+    box-shadow: 0 10px 20px 0 #EF818F(0, 0, 0.6);
+}
+
+.arrow_icon {
+    position: absolute;
+    width: 250px;
+    top: 30%;
+    left: 38%;
+    z-index: 5;
+    
+    
+}
+
 
 
 @media (max-width: 768px) {
@@ -185,12 +334,12 @@ header {
     .page_hero {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center 35%;
+    background-position: center 100%;
     min-height: 500px;
     display: flex;
     align-items: center;
     padding-top: 0px;
-    padding-bottom: 0;
+    padding-bottom: 0px;
     }
 
     .navigation_container {
@@ -256,6 +405,7 @@ header {
     width: 300px;
     padding-left: 0px;
     height: auto;
+    padding-top: 30px;
 }
 
 .peggy_image_hero {
@@ -288,34 +438,58 @@ header {
     font-size: 1rem;
 
     }
-    .about_container img {
-        width: 500px;
-        height: auto;
-        border-radius: 30px;
-    }
 
-    .about_text {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        flex-direction: column;
-        margin: 0;
-        text-align: center;
-    }
+.Service_cards {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
-    #about {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .about_image{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.gallery_photos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,220px);
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.gallery_photo {
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.gallery_photo h1 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-size: 1.5rem;
+    color: white;
+    background-color:  #EF818F;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.gallery_photo img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    border: 2px solid grey;
+    box-shadow: 0 10px 20px 0 #EF818F(0, 0, 0.6);
+}
+
+.arrow_icon {
+    position: absolute;
+    width: 200px;
+    top: 23%;
+    left: 28%;
+    z-index: 5;
+}
+
 
 }
 @media (max-width: 430px) {
@@ -353,7 +527,7 @@ header {
         display: grid;
         padding-top: 0;
         grid-template-columns: 1fr;
-        background-position: left;
+        background-position: right 20%;
         background-repeat: no-repeat;
         background-size: auto;
         height: 100vh;
@@ -362,13 +536,12 @@ header {
 
     .hero_text {
         display: flex;
-        align-items: center;
         text-align: left;
         padding-top: 0;
         margin-left: 0px;
         padding: 0;
         width: 100%;
-        padding-left: 70px;
+        padding-left: 50px;
     }
 
     .hero_text a {
@@ -379,25 +552,29 @@ header {
     }
 
     .page_hero h1 {
-        padding-top: 100px;
+        padding-top: 90px;
         padding-left: 50px;
         display: flex;
         justify-content: center;
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.8rem;
+        text-align: left;
+        font-weight: 700;
         width: 100%;
+        margin-left: 20px;
 
         
     }
 
     .page_hero h2 {
         display: flex;
-        padding-left:20px;
+        padding-left:40px;
         justify-content: center;
         font-size: 1rem;
-        text-align: center;
-        padding-bottom: 10px;
+        text-align: left;
+        padding-bottom: 20px;
         width: 100%;
+        font-weight: 800;
+        margin-left: 30px;
     }
 
     .navigation_container img {
@@ -414,31 +591,6 @@ header {
         height: auto;
         border-radius: 30px;
         align-items: center;
-    }
-
-    .about_text {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        flex-direction: column;
-        margin: 0;
-        text-align: center;
-    }
-
-    .about_text h4{
-        font-size: 0.5rem;
-        padding-top: 60px;
-    }
-
-    .about_text h1{
-        font-size: 1rem;
-        padding-top: 10px
-
-    }
-    .about_text p{
-        font-size: 0.5rem;
-        padding-bottom: 20px;
-
     }
 
      .peggy_image_hero {
@@ -466,8 +618,27 @@ header {
             transparent 50%,
             transparent 100%
         );
+    }
+
+    .page_hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.95) 0%,
+        rgba(255,255,255,0.8) 30%,
+        rgba(255,255,255,0.3) 45%,
+        rgba(255,255,255,0) 65%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
+    .hero_text,
+    .peggy_image_hero {
+        position: relative;
+        z-index: 2;
     }
 
     .peggy_image_hero {
@@ -477,3 +648,54 @@ header {
         padding-left: 0px;
         padding-top: 0px;
     }
+
+    .peggy_image_hero img {
+        padding-top: 0;
+    }
+
+    .hero_text a{
+        font-size: 1.5rem;
+    }
+
+    .Service_cards {
+        width: 150px;
+        height: auto;
+    }
+
+    .Service_cards h2 {
+        font-size: 1.5rem;
+    }
+
+    .Service_cards h3 {
+        font-size: 1rem;
+
+    }
+    
+    .gallery_photos {
+        display: grid;
+        grid-template-columns: repeat(1,220px);
+        margin: 0 auto;
+    }
+
+
+    .gallery_photo {
+        display: none;
+        cursor: pointer;
+    }
+
+    .gallery_photo.active {
+        display: block;
+    }
+
+    .arrow_icon {
+       
+        display: block;
+        margin: 20px auto;
+        top: 65%;
+        left: 15%;
+        width: 140px;
+        cursor: pointer;
+        transform: rotate(0deg);
+    }
+
+}
