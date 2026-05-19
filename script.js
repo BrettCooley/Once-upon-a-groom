@@ -6,37 +6,17 @@ burger.addEventListener ("click", function() {
 
 });
 
+const carousels = document.querySelectorAll(".gallery_photos");
 
-const galleries = document.querySelectorAll(".gallery_photos");
+carousels.forEach((carousel) => {
+  const progressBar = carousel.parentElement.querySelector(".progress_bar");
 
-galleries.forEach((gallery) => {
+  carousel.addEventListener("scroll", () => {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    const scrollPercent = carousel.scrollLeft / maxScroll;
 
-    const arrow = gallery.querySelector(".arrow_icon");
-    const beforePhoto = gallery.querySelector(".gallery_photo:nth-child(1)");
-    const afterPhoto = gallery.querySelector(".gallery_photo:nth-child(2)");
-
-    let showingAfter = false;
-
-    function swapPhotos() {
-
-        showingAfter = !showingAfter;
-
-        if (showingAfter) {
-            beforePhoto.classList.remove("active");
-            afterPhoto.classList.add("active");
-            arrow.style.transform = "rotate(180deg)";
-        } else {
-            afterPhoto.classList.remove("active");
-            beforePhoto.classList.add("active");
-            arrow.style.transform = "rotate(0deg)";
-        }
-
-    }
-
-    arrow.addEventListener("click", swapPhotos);
-
-    beforePhoto.addEventListener("click", swapPhotos);
-
-    afterPhoto.addEventListener("click", swapPhotos);
-
+    progressBar.style.transform = `translateX(${scrollPercent * 100}%)`;
+  });
 });
+
+        

@@ -133,6 +133,11 @@ header {
 
 }
 
+.hero_text h3 {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
 .hero_text a {
     text-decoration: none;
     background: #EF818F;
@@ -153,15 +158,15 @@ header {
 
 .peggy_image_hero img{
     display: block;
-    width: 750px;
-    padding-left: 200px;
+    width: 600px;
+    padding-left: 250px;
     height: auto;
 }
 
 .peggy_image_hero {
     display: flex;
     justify-content: center;
-    padding-top: 0px;
+    padding-top: 90px;
 }
 
 
@@ -292,7 +297,7 @@ header {
     color: white;
     background-color:  #EF818F;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .gallery_photo img {
@@ -332,10 +337,10 @@ header {
     }
 
     .page_hero {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center 100%;
-    min-height: 500px;
+    min-height: 900px;
     display: flex;
     align-items: center;
     padding-top: 0px;
@@ -402,10 +407,10 @@ header {
 
     .peggy_image_hero img{
     display: block;
-    width: 300px;
-    padding-left: 0px;
+    width: 325px;
+    padding-left: 50px;
     height: auto;
-    padding-top: 30px;
+    padding-top: 150px;
 }
 
 .peggy_image_hero {
@@ -421,10 +426,14 @@ header {
     }
 
     .page_hero h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding-bottom: 20px;
     }
 
+    .hero_text h3 {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
     .hero_text a {
     text-decoration: none;
     background: #D46A7E;
@@ -466,11 +475,11 @@ header {
     position: absolute;
     top: 20px;
     left: 0px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     background-color:  #EF818F;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .gallery_photo img {
@@ -529,9 +538,8 @@ header {
         grid-template-columns: 1fr;
         background-position: right 20%;
         background-repeat: no-repeat;
-        background-size: auto;
-        height: 100vh;
-        
+        background-size: cover;
+        height: 0vh;
     }
 
     .hero_text {
@@ -548,7 +556,7 @@ header {
       margin: 0;
       padding: 10px;
       align-self: center;
-      margin-left: 40px;
+      margin-left: 10px;
     }
 
     .page_hero h1 {
@@ -560,7 +568,7 @@ header {
         text-align: left;
         font-weight: 700;
         width: 100%;
-        margin-left: 20px;
+        margin-left: 0px;
 
         
     }
@@ -574,8 +582,15 @@ header {
         padding-bottom: 20px;
         width: 100%;
         font-weight: 800;
-        margin-left: 30px;
+        margin-left: 10px;
+        padding-top: 0;
     }
+
+    .hero_text h3 {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
 
     .navigation_container img {
         width: 120px;
@@ -596,17 +611,18 @@ header {
      .peggy_image_hero {
         display: flex;
         padding-right: 50px;
+        align-items: end;
      }
     
     .peggy_image_hero img{
         display: block;
-        width: 500px;
+        width: 440px;
         height: auto;
         
         -webkit-mask-image: linear-gradient(
             to bottom,
             black 0%,
-            black 70%,
+            black 80%,
             transparent 50%,
             transparent 100%
         );
@@ -614,7 +630,7 @@ header {
         mask-image: linear-gradient(
             to bottom,
             black 0%,
-            black 70%,
+            black 80%,
             transparent 50%,
             transparent 100%
         );
@@ -650,7 +666,7 @@ header {
     }
 
     .peggy_image_hero img {
-        padding-top: 0;
+        padding-top: 70px;
     }
 
     .hero_text a{
@@ -670,32 +686,63 @@ header {
         font-size: 1rem;
 
     }
-    
-    .gallery_photos {
-        display: grid;
-        grid-template-columns: repeat(1,220px);
-        margin: 0 auto;
+
+    .gallery_text h2 {
+        font-size: 1.5rem;
     }
 
+
+    .gallery_photos {
+        display: flex;
+        gap: 30px;
+
+        width: 280px;
+        height: auto;
+        margin-right: 30px;
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding-left: 0px;
+    }
 
     .gallery_photo {
-        display: none;
+        position: relative;
+        min-width: 220px;
         cursor: pointer;
+        scroll-snap-align: center;
     }
 
-    .gallery_photo.active {
-        display: block;
+    .gallery_photo img {
+        width: 220px;
+        height: 300px;
+        object-fit: cover;
     }
+
 
     .arrow_icon {
-       
-        display: block;
-        margin: 20px auto;
-        top: 65%;
-        left: 15%;
-        width: 140px;
-        cursor: pointer;
-        transform: rotate(0deg);
+        display: none;
     }
+
+        
+    .gallery_progress {
+    width: 90px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 0px auto 0;
+    overflow: hidden;
+    }
+
+    .progress_bar {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #EF818F;
+    border-radius: 20px;
+    transform: translateX(0);
+    }
+
+
 
 }
