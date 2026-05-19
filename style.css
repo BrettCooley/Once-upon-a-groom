@@ -552,12 +552,6 @@ header {
         padding-left: 50px;
     }
 
-    .hero_text a {
-      margin: 0;
-      padding: 10px;
-      align-self: center;
-      margin-left: 10px;
-    }
 
     .page_hero h1 {
         padding-top: 90px;
@@ -666,11 +660,27 @@ header {
     }
 
     .peggy_image_hero img {
-        padding-top: 70px;
+        padding-top: 100px;
+        width: 350px
     }
 
     .hero_text a{
         font-size: 1.5rem;
+        
+    }
+
+    .hero_text h1 {
+        padding-left: 0;
+    }
+
+    .hero_text h2 {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .hero_text h3 {
+        padding-left: 0;
+        padding-bottom: 40px;
     }
 
     .Service_cards {
