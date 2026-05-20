@@ -511,6 +511,7 @@ header {
     .burger {
         font-size: 2rem;
         padding-left: 60px;
+        text-decoration: none;
     }
 
     .navigation_buttons {
@@ -714,12 +715,14 @@ header {
 
         width: 280px;
         height: auto;
-        margin-right: 30px;
+        margin: 0 auto;
 
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        scroll-padding-left: 0px;
+        scroll-padding: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
 
     .gallery_photo {
