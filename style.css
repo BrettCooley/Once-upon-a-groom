@@ -711,7 +711,7 @@ header {
 
     .gallery_photos {
         display: flex;
-        gap: 30px;
+        gap: 10px;
 
         width: 280px;
         height: auto;
