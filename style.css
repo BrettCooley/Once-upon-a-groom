@@ -279,9 +279,9 @@ header {
 .gallery_photos {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2,520px);
+    grid-template-columns: repeat(2,400px);
     margin: 0 auto;
-    gap: 20px;
+    gap: 100px;
 }
 
 .gallery_photo {
@@ -302,8 +302,8 @@ header {
 
 .gallery_photo img {
     display: block;
-    width: 520px;
-    height: 520px;
+    width: 420px;
+    height: 420px;
     border-radius: 30px;
     border: 6px solid #EF818F;
     box-shadow: 0 10px 20px 0 #EF818F(0, 0, 0.6);
@@ -313,12 +313,78 @@ header {
     position: absolute;
     width: 250px;
     top: 30%;
-    left: 38%;
+    left: 37%;
     z-index: 5;
     
     
 }
 
+.ready_to_book_container {
+    background-color: #EF818F;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    color: white;
+}
+
+.ready_to_book_container a{
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: 20px;
+    color: #EF818F;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ready_to_book_container a:hover {
+    transform: scale(1.02);
+}
+
+.book_image {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+
+.ready_to_book_container img {
+    display: block;
+    height: auto;
+    width: 160px;
+}
+
+.book_text {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.book_text h1 {
+    padding-top: 0px;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.book_text h2 {
+    font-size: 1.2rem;
+}
+
+
+#footer {
+    background-color:#f1efed;
+}
+
+.footer_logo img {
+    width: 200px;
+
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
 
 
 @media (max-width: 768px) {
@@ -411,96 +477,149 @@ header {
     padding-left: 50px;
     height: auto;
     padding-top: 150px;
-}
-
-.peggy_image_hero {
-    display: flex;
-    justify-content: center;
-    padding-top: 0px;
-}
-
-
-    .page_hero h1 {
-        font-size: 2rem;
-        padding-bottom: 20px;
     }
 
-    .page_hero h2 {
+    .peggy_image_hero {
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+
+        .page_hero h1 {
+            font-size: 2rem;
+            padding-bottom: 20px;
+        }
+
+        .page_hero h2 {
+            font-size: 1.2rem;
+            padding-bottom: 20px;
+        }
+
+        .hero_text h3 {
         font-size: 1.2rem;
         padding-bottom: 20px;
     }
+        .hero_text a {
+        text-decoration: none;
+        background: #D46A7E;
+        border-radius: 10px;
+        border: 2px solid #2d2d2d;
+        padding: 5px;
+        margin-top: 0px;
+        margin-left: 0px;
+        color: white;
+        width: fit-content;
+        font-size: 1rem;
 
-    .hero_text h3 {
-    font-size: 1.2rem;
-    padding-bottom: 20px;
-}
-    .hero_text a {
-    text-decoration: none;
-    background: #D46A7E;
-    border-radius: 10px;
-    border: 2px solid #2d2d2d;
-    padding: 5px;
-    margin-top: 0px;
-    margin-left: 0px;
-    color: white;
-    width: fit-content;
-    font-size: 1rem;
+        }
 
+    .Service_cards {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 
-.Service_cards {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
+    .gallery_photos {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,220px);
+        margin: 0 auto;
+        gap: 20px;
+    }
 
-.gallery_photos {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2,220px);
-    margin: 0 auto;
-    gap: 20px;
-}
+    .gallery_photo {
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 
-.gallery_photo {
-    position: relative;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
+    .gallery_photo h1 {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        font-size: 1rem;
+        color: white;
+        background-color:  #EF818F;
+        padding: 10px;
+        border-radius: 30px;
+    }
 
-.gallery_photo h1 {
-    position: absolute;
-    top: 20px;
-    left: 0px;
-    font-size: 1rem;
-    color: white;
-    background-color:  #EF818F;
-    padding: 10px;
-    border-radius: 30px;
-}
+    .gallery_photo img {
+        display: block;
+        width: 220px;
+        height: 220px;
+        border-radius: 30px;
+        border: 2px solid grey;
+        box-shadow: 0 10px 20px 0 #EF818F(0, 0, 0.6);
+    }
 
-.gallery_photo img {
-    display: block;
-    width: 220px;
-    height: 220px;
-    border-radius: 30px;
-    border: 2px solid grey;
-    box-shadow: 0 10px 20px 0 #EF818F(0, 0, 0.6);
-}
+    .arrow_icon {
+        position: absolute;
+        width: 200px;
+        top: 23%;
+        left: 28%;
+        z-index: 5;
+    }
 
-.arrow_icon {
-    position: absolute;
-    width: 200px;
-    top: 23%;
-    left: 28%;
-    z-index: 5;
-}
+    .ready_to_book_container {
+        background-color: #EF818F;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 0.8fr 1fr 1fr;
+        color: white;
+    }
+
+    .ready_to_book_container a{
+        align-self: center;
+        justify-self: center;
+        background-color: white;
+        border-radius: 20px;
+        color: #EF818F;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+
+    .ready_to_book_container a:hover {
+        transform: scale(1.02);
+    }
+
+    .book_image {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0px;
+    }
 
 
-}
+    .ready_to_book_container img {
+        display: block;
+        height: auto;
+        width: 100px;
+    }
+
+    .book_text {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book_text h1 {
+        padding-top: 0px;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .book_text h2 {
+        font-size: 0.8rem;
+    }
+
+
+    }
 @media (max-width: 430px) {
     .logo_container img {
         width: 600px;
@@ -762,6 +881,72 @@ header {
     transform: translateX(0);
     }
 
+    .gallery_progress:last-of-type {
+        margin-bottom: 20px;
+    }
+    
+
+    .ready_to_book_container {
+    background-color: #EF818F;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+    .ready_to_book_container a{
+        align-self: center;
+        justify-self: center;
+        background-color: white;
+        border-radius: 20px;
+        color: #EF818F;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 0.5rem;
+        margin-bottom: 10px;
+    }
+
+    .ready_to_book_container a:hover {
+        transform: scale(1.02);
+    }
+
+    .book_image {
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+        width: 50px;
+        height: 50px;
+    }
 
 
+    .ready_to_book_container img {
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .book_text {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .book_text h1 {
+        padding-top: 0px;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .book_text h2 {
+        font-size: 0.6rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
 }

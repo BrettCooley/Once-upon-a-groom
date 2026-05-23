@@ -9,7 +9,7 @@ burger.addEventListener ("click", function() {
 const carousels = document.querySelectorAll(".gallery_photos");
 
 carousels.forEach((carousel) => {
-  const progressBar = carousel.parentElement.querySelector(".progress_bar");
+  const progressBar = carousel.nextElementSibling.querySelector(".progress_bar");
 
   carousel.addEventListener("scroll", () => {
     const maxScroll = carousel.scrollWidth - carousel.clientWidth;
