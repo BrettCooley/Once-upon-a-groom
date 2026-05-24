@@ -398,6 +398,20 @@ header {
     flex-direction: column;
     text-decoration: none;
     color: #EF818F;
+    
+}
+
+.quick_links {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #EF818F;
+    margin-bottom: 0px;
+    
+}
+
+.quick_link img {
+    transform: translatey(5px);
 }
 
 .quick_links a:nth-child(2) {
@@ -412,6 +426,7 @@ header {
 .contact_link_header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 
@@ -437,6 +452,25 @@ header {
     padding-top: 10px;
 }
 
+.copy_right {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy_right h1{
+    margin-left: 50px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.copy_right h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 50px;
+}
 
 
 @media (max-width: 768px) {
@@ -675,8 +709,148 @@ header {
         font-size: 0.8rem;
     }
 
+    #footer {
+    background-color:#f1efed;
+    }
+
+    .footer_logo {
+        display: none;
 
     }
+
+    .footer_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .social_media_header {
+        grid-column: 1 / -1;
+        justify-self: center;
+        
+    }
+
+    .social_media_header h1 {
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .social_media_header h2 {
+        text-align: center;
+        margin-right: 0px;
+    }
+
+
+    .quick_links a{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: #EF818F;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quick_links {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: #EF818F;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .quick_links a:nth-child(2) {
+        margin-top: 6px;
+    }
+
+    .quick_link_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quick_link_header h1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+    }
+
+    .quick_link_header h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8rem;
+    }
+
+    .contact_link_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact_link_header h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+        padding-left: 20px;
+    }
+
+    .social_media_header h1 {
+        font-size: 1rem;
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+
+    .social_media_header h2 {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .social_media_icons {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+    .social_media_icon img {
+        display: block;
+        width: 60px;
+        height: auto;
+        padding-top: 10px;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(80px);
+    }
+
+
+    .copy_right {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copy_right h1{
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 0;
+    }
+
+    .copy_right h2 {
+        font-size: 0.8rem;
+        font-weight: 300;
+        margin-left: 0;
+    }
+
+}
+
+
+
 @media (max-width: 430px) {
     .logo_container img {
         width: 600px;
@@ -1006,4 +1180,52 @@ header {
         text-align: center;
         padding-bottom: 10px;
     }
+
+    .social_media_header h1 {
+        font-size: 1rem;
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+
+    .social_media_header h2 {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .social_media_icons {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+    .social_media_icon img {
+        display: block;
+        width: 60px;
+        height: auto;
+        padding-top: 10px;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(80px);
+    }
+
+
+    .quick_link {
+        font-size: 0.8rem;
+    }
+
+    .quick_links a {
+        margin: 3px;
+    }
+
+    .quick_link_header h1 {
+        margin-top: 20px;
+    }
+
+
+
+
+    .contact_link_header h1 {
+        margin-top: 20px;
+    }
+
 }
