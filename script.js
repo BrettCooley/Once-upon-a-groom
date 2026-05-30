@@ -1,10 +1,14 @@
-const burger = document.querySelector(".burger")
+const burger = document.querySelector(".burger");
 const nav_bar = document.querySelector(".navigation_buttons")
 
-burger.addEventListener ("click", function() {
-    nav_bar.classList.toggle("active")
-
+burger.addEventListener( "click", () =>  {
+  nav_bar.classList.toggle("active")
+  burger.classList.toggle("active")
 });
+
+
+
+
 
 const carousels = document.querySelectorAll(".gallery_photos");
 
