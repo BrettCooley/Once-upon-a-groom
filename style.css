@@ -9,6 +9,28 @@ body {
 }
 
 
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 header {
     padding: 20px 30px;
     align-items:flex-start;
@@ -440,6 +462,9 @@ header {
     margin-bottom: 0;
 }
 
+.contact_link_header {
+    text-decoration: none;
+}
 
 .social_media_header h1 {
     font-size: 2rem;
@@ -1195,7 +1220,7 @@ header {
         display: flex;
         justify-content: center;
         padding-right: 0px;
-        width: 50px;
+        width: 75px;
         height: 50px;
     }
 

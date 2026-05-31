@@ -6,10 +6,6 @@ burger.addEventListener( "click", () =>  {
   burger.classList.toggle("active")
 });
 
-
-
-
-
 const carousels = document.querySelectorAll(".gallery_photos");
 
 carousels.forEach((carousel) => {
@@ -23,4 +19,17 @@ carousels.forEach((carousel) => {
   });
 });
 
-        
+
+const hiddenElements = document.querySelectorAll(".hidden");
+
+const observer = new IntersectionObserver ((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+hiddenElements.forEach((element) => {
+  observer.observe(element);
+});
