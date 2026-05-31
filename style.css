@@ -21,7 +21,7 @@ body {
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(20px);
     }
 
     to {
@@ -439,6 +439,11 @@ header {
     
 }
 
+.quick_link a {
+    text-decoration: none;
+    color: #EF818F;
+}
+
 .quick_link img {
     transform: translatey(5px);
 }
@@ -453,6 +458,11 @@ header {
 }
 
 .quick_link {
+    text-decoration: none;
+    color: #EF818F;
+}
+
+.quick_link text {
     text-decoration: none;
 }
 
@@ -1198,7 +1208,7 @@ header {
     text-align: center;
     justify-content: center;
     color: white;
-}
+    }
 
     .ready_to_book_container a{
         align-self: center;
@@ -1224,11 +1234,10 @@ header {
         height: 50px;
     }
 
-
     .ready_to_book_container img {
         display: block;
         height: 50px;
-        width: 50px;
+        width: 75px;
     }
 
     .book_text {
